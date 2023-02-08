@@ -1,0 +1,79 @@
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body>header {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 15px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px;
+    height: fit-content;
+    background-color: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 30px;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+    background-color: #E2DBBE;
+    border-radius: 5px;
+    transition: 0.5s;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px 2px grey;
+}
+
+.card>header {
+    height: 86px;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #227c9d;
+    color: white;
+}
+
+.card>header>p {
+    text-align: center;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    padding: 10px;
+    background-color: #363537;
+    border-radius: 0 0 5px 5px;
+    color: white;
+}
